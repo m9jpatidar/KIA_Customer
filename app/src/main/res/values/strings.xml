@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Mr. Know It All Towing</string>
+    <string name="login_text">To continue please enter your phone number below</string>
+    <string name="splash_text">Mr. Know It All Towing</string>
+
+    <!-- Login Screen Text -->
+    <string name="phone_no">Phone Number </string>
+    <string name="hint_phone_no">Enter phone Number</string>
+    <string name="continue_text">Continue</string>
+    <string name="verify_text">Verify</string>
+    <string name="resend_verification_code"><u>Resend Verification Code</u></string>
+    <string name="invalid_email_phone">Invalid Phone Number</string>
+    <string name="invalid_phone">Invalid Phone Number</string>
+    <string name="otp_text">We have sent a verification code to %s, please enter below to verify and continue</string>
+
+    <!-- Progress bar text -->
+    <string name="txt_loading_please_wait">Loading please wait…</string>
+
+    <!-- Profile text -->
+    <string name="complete_your_profile">Complete your profile</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="hint_email">Email (Optional)</string>
+    <string name="email">Email</string>
+
+    <!-- Home Page test -->
+    <string name="home_text">Had An Accident?\nCar Broke Down?\nNeed a Tow?</string>
+    <string name="follow_me_text">Follow us on</string>
+    <string name="menu">Menu</string>
+
+    <!-- Send Request text -->
+    <string name="back">Back</string>
+    <string name="send_request">Send Request</string>
+    <string name="type_of_service_requested">Type of service requested</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_location">Your Location</string>
+    <string name="add_address">Add Address</string>
+    <string name="edit">Edit</string>
+
+    <!-- Edit Address -->
+    <string name="done">Done</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="landmark">Landmark</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="postalcode">Postal Code</string>
+    <string name="use_current_location">Use Current Location</string>
+
+    <!-- My Account text -->
+    <string name="update">Update</string>
+
+    <!-- Menu Drawer text -->
+    <string name="menu_home">Home</string>
+    <string name="menu_requests">Requests</string>
+    <string name="menu_my_account">My Account</string>
+    <string name="menu_call_directly">Call Directly</string>
+    <string name="menu_promo_code">My promo Codes</string>
+    <string name="menu_tnc">Terms &amp; Conditions</string>
+    <string name="menu_faq">FAQ\'s</string>
+    <string name="menu_sign_out">Sign Out</string>
+    <string name="nav_header_desc">Navigation Header</string>
+
+    <!-- Error text -->
+    <string name="something_went_wrong">Something went wrong</string>
+
+    <string-array name="service_type">
+        <item>Accident</item>
+        <item>Battery</item>
+        <item>Fuel</item>
+        <item>Tow</item>
+        <item>Lockout</item>
+        <item>Winch</item>
+        <item>Flat Tire</item>
+        <item>Other</item>
+    </string-array>
+</resources>

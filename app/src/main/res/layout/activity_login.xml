@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <ImageView
+        android:id="@+id/login_img"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/splash_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/login_text"
+        android:textColor="#040404"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_img" />
+
+    <TextView
+        android:id="@+id/phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/phone_no"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_text" />
+
+    <LinearLayout
+        android:id="@+id/mobileNoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="30dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_text">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/curve_black_border"
+            android:gravity="center"
+            android:text="+1"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/phone_no"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20sp"
+            android:layout_weight="1.6"
+            android:text="9868638585"
+            android:inputType="phone"
+            android:background="@drawable/curve_black_border"
+            android:hint="@string/hint_phone_no"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNoLayout"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="8dp"
+        android:id="@+id/frameLayout"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNoLayout">
+
+        <com.mukeshsolanki.OtpView
+            android:id="@+id/otpView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:OtpItemCount="6"
+            app:OtpItemHeight="32dp"
+            app:OtpHideLineWhenFilled="false"
+            app:OtpItemSpacing="15dp"
+            app:OtpItemWidth="32dp"
+            app:OtpLineColor="@color/black"
+            app:OtpState_filled="true"
+            app:OtpViewType="line" />
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:theme="@style/BlackButtonStyle"
+        android:background="@drawable/curve_black_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:visibility="gone"
+        android:onClick="verifyOTP"
+        android:id="@+id/btnVerify"
+        android:text="@string/verify_text"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_verification_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVerify"
+        android:layout_margin="24dp"
+        android:visibility="gone"
+        android:onClick="resesndOTP"
+        android:id="@+id/btnResendOTP"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:theme="@style/BlackButtonStyle"
+        android:background="@drawable/curve_black_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:onClick="signIn"
+        android:id="@+id/signin"
+        android:text="@string/continue_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/progressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/dialog_progress_bar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
